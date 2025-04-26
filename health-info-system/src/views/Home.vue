@@ -1,25 +1,41 @@
 <template>
   <div class="view home">
-    <h1>Welcome to Kierra health info systems</h1>
-    <p>Hello Fellow member of our amazing Team. With you forever we stay connected.</p>
+    <h1>Welcome to Our Hospital</h1>
+    <p>Discover our services below:</p>
+    <HospitalServices />
   </div>
 </template>
+
+<script>
+import HospitalServices from "@/components/HospitalServices.vue";
+
+export default {
+  name: "Home",
+  components: {
+    HospitalServices
+  }
+};
+</script>
+
+<style scoped>
+.view {
+  padding: 2rem;
+}
+
+h1 {
+  color: #2ecc71;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+</style>
+
 
 <script>
 export default {
   name: 'Home'
 };
 </script>
-
-
-<style scoped>
-.view {
-  padding: 2rem;
-}
-h1 {
-  color: #2ecc71;
-}
-p {
-  color: #333;
-}
-</style>
