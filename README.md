@@ -109,3 +109,7 @@ The project uses nodemon for the backend development, which automatically restar
 ## License
 
 ISC
+## Project Presentation
+
+A project presentation is available in the repository:
+[Click here to view the PowerPoint presentation](docs/HEALTH-SYS.pptx)
