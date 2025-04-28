@@ -16,7 +16,7 @@ const state = { ...initialState }
 const getters = {
   user: state => state.user,
   loggedIn: state => !!state.user,
-  isDoctor: state => state.user && state.user.role === 'doctor',
+ isDoctor: state => state.user && state.user.user.role === 'doctor',
   isLoggingIn: state => state.status.loggingIn,
   isRegistering: state => state.status.registering,
   isRefreshing: state => state.status.refreshing
