@@ -24,6 +24,7 @@ class AuthService {
   async register(userData) {
     try {
       const response = await api.post('/register', userData)
+<<<<<<< HEAD
 
       if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data))
@@ -33,6 +34,8 @@ class AuthService {
           localStorage.setItem('token', response.data.token)
         }
       }
+=======
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
       return response.data
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Registration failed')
@@ -59,6 +62,7 @@ class AuthService {
   
   async getCurrentUser() {
     try {
+<<<<<<< HEAD
       const response = await api.get('/user')
 
       // const response = {
@@ -71,6 +75,20 @@ class AuthService {
       //     createdAt: "2023-01-01T00:00:00Z",
       //     updatedAt: "2023-01-01T00:00:00Z",  
       //   }}
+=======
+      // const response = await api.get('/user')
+
+      const response = {
+        data: {
+          id: 1,
+          name: "John Doe",
+          email: "example@gmail.com",
+
+          role: "admin",
+          createdAt: "2023-01-01T00:00:00Z",
+          updatedAt: "2023-01-01T00:00:00Z",  
+        }}
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 
 
       return response.data

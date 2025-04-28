@@ -18,7 +18,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView,
+<<<<<<< HEAD
     meta: { requiresAuth: true }
+=======
+    // meta: { requiresAuth: true }
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
   },
   {
     path: '/login',
@@ -36,45 +40,73 @@ const routes = [
     path: '/clients',
     name: 'client-list',
     component: ClientList,
+<<<<<<< HEAD
     meta: { requiresAuth: true }
+=======
+    // meta: { requiresAuth: true }
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
   },
   {
     path: '/clients/new',
     name: 'client-create',
     component: ClientCreate,
+<<<<<<< HEAD
     meta: { requiresAuth: true, requiresDoctor: true }
+=======
+    // meta: { requiresAuth: true, requiresDoctor: true }
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
   },
   {
     path: '/clients/:id',
     name: 'client-detail',
     component: ClientDetail,
+<<<<<<< HEAD
     meta: { requiresAuth: true },
+=======
+    // meta: { requiresAuth: true },
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     props: true
   },
   {
     path: '/programs',
     name: 'program-list',
     component: ProgramList,
+<<<<<<< HEAD
     meta: { requiresAuth: true }
+=======
+    // meta: { requiresAuth: true }
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
   },
   {
     path: '/programs/new',
     name: 'program-create',
     component: ProgramCreate,
+<<<<<<< HEAD
     meta: { requiresAuth: true, requiresDoctor: true }
+=======
+    // meta: { requiresAuth: true, requiresDoctor: true }
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
   },
   {
     path: '/programs/:id',
     name: 'program-detail',
     component: ProgramDetail,
+<<<<<<< HEAD
     meta: { requiresAuth: true },
+=======
+    // meta: { requiresAuth: true },
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     props: true
   },
   {
     path: '/enroll',
     name: 'enrollment-create',
     component: EnrollmentCreate,
+<<<<<<< HEAD
     meta: { requiresAuth: true, requiresDoctor: true }
+=======
+    // meta: { requiresAuth: true, requiresDoctor: true }
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
   },
   {
     path: '/:pathMatch(.*)*',

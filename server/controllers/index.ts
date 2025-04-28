@@ -26,6 +26,7 @@ const auth = getAuth(app);
 // Authentication Controllers
 export const login = async (req: Request, res: Response) => {
   try {
+<<<<<<< HEAD
     let email, password;
 
     console.log('Request body:', req.body); // Log the request body for debugging
@@ -34,6 +35,9 @@ export const login = async (req: Request, res: Response) => {
     } catch (error) {
       return res.status(400).json({ message: 'Invalid JSON payload' });
     }
+=======
+    const { email, password} = req.body;
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     
     if (!email) {
       return res.status(400).json({ message: 'Email is required' });
@@ -58,8 +62,12 @@ export const login = async (req: Request, res: Response) => {
       return res.status(200).json({
         success: true,
         message: 'Login successful',
+<<<<<<< HEAD
         user,
         token
+=======
+        user
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
       });
     } catch (error) {
       console.error('Auth error:', error);
@@ -101,8 +109,12 @@ export const register = async (req: Request, res: Response) => {
     return res.status(201).json({
       success: true,
       message: 'User registered successfully',
+<<<<<<< HEAD
       user: newUser,
       token: await userCredential.user.getIdToken()
+=======
+      user: newUser
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     });
   } catch (error: any) {
     console.error('Registration error:', error);

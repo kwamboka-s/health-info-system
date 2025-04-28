@@ -9,6 +9,7 @@
       
       <form @submit.prevent="handleSubmit" class="auth-form">
         <div class="form-group">
+<<<<<<< HEAD
           <label for="email" class="form-label">Email</label>
           <input 
             type="text" 
@@ -17,6 +18,16 @@
             class="form-input" 
             required 
             autocomplete="email"
+=======
+          <label for="username" class="form-label">Username</label>
+          <input 
+            type="text" 
+            id="username" 
+            v-model="form.username" 
+            class="form-input" 
+            required 
+            autocomplete="username"
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
           />
         </div>
         
@@ -69,7 +80,11 @@ export default {
     const router = useRouter()
     
     const form = ref({
+<<<<<<< HEAD
       email: '',
+=======
+      username: '',
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
       password: ''
     })
     
@@ -86,7 +101,11 @@ export default {
       
       try {
         await store.dispatch('auth/login', {
+<<<<<<< HEAD
           email: form.value.email,
+=======
+          username: form.value.username,
+>>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
           password: form.value.password
         })
         router.push('/')
