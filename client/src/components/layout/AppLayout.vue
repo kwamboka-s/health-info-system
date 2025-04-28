@@ -160,17 +160,19 @@ export default {
     }
     
     // Logout function
-    const logout = async () => {
-      try {
-        await store.dispatch('auth/logout')
-        router.push('/login')
-        closeMenus()
-     
-      } catch (error) {
-        console.error('Logout failed:', error)
-      }
-    }
-    
+const logout = async () => {
+  try {
+    await store.dispatch('auth/logout');
+    router.push('/login');  // Navigate to the login page
+    closeMenus();  // Close any open menus
+
+    // Reload the page after logging out
+    window.location.reload();  // This will reload the page
+  } catch (error) {
+    console.error('Logout failed:', error);
+  }
+}
+
     // Set up event listeners
     onMounted(() => {
       document.addEventListener('click', handleClickOutside)
