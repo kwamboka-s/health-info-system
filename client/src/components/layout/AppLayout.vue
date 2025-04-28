@@ -107,7 +107,6 @@ export default {
     // Get user data
     const user = computed(() => store.getters['auth/user'])
     const userName = computed(() => {
-<<<<<<< HEAD
       if (user.value && user.value.fullName) {
         return user.value.fullName
       }
@@ -119,17 +118,6 @@ export default {
         return user.value.role.charAt(0).toUpperCase() + user.value.role.slice(1)
       }
       return ''
-=======
-      if (user.value?.fullName) {
-        return user.value.fullName
-      }
-      return user.value?.username || 'User'
-    })
-    const userEmail = computed(() => user.value?.email || '')
-    const userRole = computed(() => {
-      if (!user.value?.role) return ''
-      return user.value.role.charAt(0).toUpperCase() + user.value.role.slice(1)
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     })
     const isDoctor = computed(() => store.getters['auth/isDoctor'])
     
@@ -168,7 +156,6 @@ export default {
     
     // Logout function
     const logout = async () => {
-<<<<<<< HEAD
       try {
         await store.dispatch('auth/logout')
         router.push('/login')
@@ -177,11 +164,6 @@ export default {
       } catch (error) {
         console.error('Logout failed:', error)
       }
-=======
-      await store.dispatch('auth/logout')
-      closeMenus()
-      router.push('/login')
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     }
     
     // Set up event listeners

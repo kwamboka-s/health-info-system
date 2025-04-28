@@ -36,20 +36,12 @@ const router = Router();
  *             type: object
  *             required:
  *               - email
-<<<<<<< HEAD
  *               - password
  *             properties:
  *               email:
  *                 type: string
  *               password:
  *                type: string
-=======
- *             properties:
- *               name:
- *                 type: string
- *               email:
- *                 type: string
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
  *     responses:
  *       200:
  *         description: Login successful
@@ -77,7 +69,6 @@ router.post('/login', login);
  *             type: object
  *             required:
  *               - username
-<<<<<<< HEAD
  *               - role
  *               - email
  *               - password
@@ -92,19 +83,6 @@ router.post('/login', login);
  *                 type: string
  *               password:
  *                type: string
-=======
- *               - email
- *             properties:
- *               username:
- *                 type: string
- *               email:
- *                 type: string
- *               role:
- *                 type: string
- *                 default: user
- *               fullname:
- *                 type: string
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
  *     responses:
  *       201:
  *         description: User registered successfully
@@ -332,7 +310,6 @@ router.get('/programs', getPrograms);
  *       200:
  *         description: Program details
  *       404:
-<<<<<<< HEAD
  *         description: Program not found
  *       500:
  *         description: Server error
@@ -524,10 +501,4 @@ router.get('/programs/:programId/enrollments', getProgramEnrollmentsData);
  */
 router.post('/enroll', createEnrollment);
 
-=======
- *
- * 
- * 
-*/
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 export default router;

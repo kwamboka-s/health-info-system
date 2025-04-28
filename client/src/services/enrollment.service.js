@@ -3,7 +3,6 @@ import api from './api'
 class EnrollmentService {
   async getAllEnrollments() {
     try {
-<<<<<<< HEAD
       const response = await api.get('/enrollments')
       // const response = {
       //   data: [
@@ -29,33 +28,6 @@ class EnrollmentService {
       //     },
       //   ],
       // }
-=======
-      // const response = await api.get('/enrollments')
-      const response = {
-        data: [
-          {
-        id: 1,
-        clientId: 101,
-        programId: 202,
-        status: "active",
-        enrolledAt: "2023-10-01T10:00:00Z",
-        completedAt: null,
-        notes: "Initial enrollment",
-        enrolledBy: 301,
-          },
-          {
-        id: 2,
-        clientId: 102,
-        programId: 203,
-        status: "completed",
-        enrolledAt: "2023-09-15T14:30:00Z",
-        completedAt: "2023-10-01T12:00:00Z",
-        notes: "Program completed successfully",
-        enrolledBy: 302,
-          },
-        ],
-      }
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
       return response.data
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Failed to fetch enrollments')
@@ -64,7 +36,6 @@ class EnrollmentService {
 
   async getClientEnrollments(clientId) {
     try {
-<<<<<<< HEAD
       const response = await api.get(`/clients/${clientId}/enrollments`);
       // const response = {
       //   data: [
@@ -90,33 +61,6 @@ class EnrollmentService {
       //     },
       //   ],
       // }
-=======
-      // const response = await api.get(`/clients/${clientId}/enrollments`);
-      const response = {
-        data: [
-          {
-        id: 1,
-        clientId: clientId,
-        programId: 202,
-        status: "active",
-        enrolledAt: "2023-10-01T10:00:00Z",
-        completedAt: null,
-        notes: "Initial enrollment",
-        enrolledBy: 301,
-          },
-          {
-        id: 2,
-        clientId: clientId,
-        programId: 203,
-        status: "completed",
-        enrolledAt: "2023-09-15T14:30:00Z",
-        completedAt: "2023-10-01T12:00:00Z",
-        notes: "Program completed successfully",
-        enrolledBy: 302,
-          },
-        ],
-      }
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
       return response.data
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Failed to fetch client enrollments')
@@ -125,7 +69,6 @@ class EnrollmentService {
 
   async getProgramEnrollments(programId) {
     try {
-<<<<<<< HEAD
       const response = await api.get(`/programs/${programId}/enrollments`)
 
       // const response = {
@@ -152,34 +95,6 @@ class EnrollmentService {
       //     },
       //   ],
       // }
-=======
-      // const response = await api.get(`/programs/${programId}/enrollments`)
-
-      const response = {
-        data: [
-          {
-        id: 1,
-        clientId: 101,
-        programId: programId,
-        status: "active",
-        enrolledAt: "2023-10-01T10:00:00Z",
-        completedAt: null,
-        notes: "Initial enrollment",
-        enrolledBy: 301,
-          },
-          {
-        id: 2,
-        clientId: 102,
-        programId: programId,
-        status: "completed",
-        enrolledAt: "2023-09-15T14:30:00Z",
-        completedAt: "2023-10-01T12:00:00Z",
-        notes: "Program completed successfully",
-        enrolledBy: 302,
-          },
-        ],
-      }
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
       return response.data
     } catch (error) {
       throw new Error(error.response?.data?.message || 'Failed to fetch program enrollments')

@@ -32,17 +32,12 @@ npm install
 
 3. Create a `.env` file in the server directory with the following variables:
 ```
-<<<<<<< HEAD
 
 PORT=5000
 NODE_ENV=development
 FIREBASE_API_KEY=your_firebase_api_key
 FIREBASE_PROJECT_ID=your_firebase_project_id
 FIREBASE_APPLICATION_ID=your_firebase_application_id
-=======
-PORT=5000
-NODE_ENV=development
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 ```
 
 4. Start the development server:
@@ -53,10 +48,7 @@ npm run dev
 The server will start running on `http://localhost:5000`. The API documentation will be available at `http://localhost:5000/api-docs`.
 
 ### Setting up the Frontend Client
-<<<<<<< HEAD
 setup .env using .example.env
-=======
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 
 1. Open a different terminal and navigate to the client directory:
 ```bash
@@ -70,11 +62,7 @@ npm install
 
 3. Start the client development server:
 ```bash
-<<<<<<< HEAD
 npm run serve
-=======
-npm run server
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 ```
 
 The client application will be available at `http://localhost:3000` (or the port specified by your client setup).
@@ -116,11 +104,7 @@ The server provides the following API endpoints:
 - Swagger for API documentation
 
 ### Frontend
-<<<<<<< HEAD
 - Vue.js and Vuex
-=======
-- Modern JavaScript/TypeScript framework
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 - API communication with the backend
 
 ## Development
@@ -129,12 +113,4 @@ The project uses nodemon for the backend development, which automatically restar
 
 ## License
 
-<<<<<<< HEAD
 ISC
-=======
-ISC
-## Project Presentation
-
-A project presentation is available in the repository:
-[Click here to view the PowerPoint presentation](docs/HEALTH-SYS.pptx)
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b

@@ -1,18 +1,10 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
     <AppLayout v-if="isAuthenticated">
       <router-view />
     </AppLayout>
     
     <router-view v-else />
-=======
-    <AppLayout >
-      <router-view />
-    </AppLayout>
-    
-    <!-- <router-view v-else /> -->
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
   </div>
 </template>
 
@@ -30,13 +22,9 @@ export default {
     const store = useStore()
     
     // Check if the user is authenticated
-<<<<<<< HEAD
     const isAuthenticated = computed(() => {
       return store.getters['auth/loggedIn']
     })
-=======
-    const isAuthenticated = computed(() => store.getters['auth/loggedIn'])
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     
     return {
       isAuthenticated

@@ -13,15 +13,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-<<<<<<< HEAD
 const allowedOrigins = ['http://localhost:8080', 'https://healthinfosystem-beta.vercel.app'];
 app.use(cors({
   origin: allowedOrigins,
   credentials: true,
 }));
-=======
-app.use(cors());
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -38,11 +34,7 @@ app.get('/health', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-<<<<<<< HEAD
   console.log(`Server running on port http://localhost:${PORT}`);
-=======
-  console.log(`Server running on port ${PORT}`);
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
 });
 
 export default app;

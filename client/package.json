@@ -10,10 +10,7 @@
   "dependencies": {
     "axios": "^1.9.0",
     "core-js": "^3.8.3",
-<<<<<<< HEAD
     "dotenv": "^16.5.0",
-=======
->>>>>>> 88da31ceca2d2edc344ba8cb1051b4725c20fd1b
     "vue": "^3.2.13",
     "vue-router": "^4.5.1",
     "vuex": "^4.1.0"
