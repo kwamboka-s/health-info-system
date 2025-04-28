@@ -92,6 +92,7 @@ import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 
+
 export default {
   name: 'AppLayout',
   setup() {
@@ -106,20 +107,24 @@ export default {
     
     // Get user data
     const user = computed(() => store.getters['auth/user'])
+
+   
+
     const userName = computed(() => {
-      if (user.value && user.value.fullName) {
-        return user.value.fullName
+      if (user.value.user && user.value.user.fullName) {
+        return user.value.user.fullName
       }
-      return user.value && user.value.username ? user.value.username : 'User'
+      return user.value && user.value.user.username ? user.value.user.username : 'User'
     })
-    const userEmail = computed(() => (user.value && user.value.email) || '')
+    const userEmail = computed(() => (user.value && user.value.user.email) || '')
     const userRole = computed(() => {
-      if (user.value && user.value.role) {
-        return user.value.role.charAt(0).toUpperCase() + user.value.role.slice(1)
+      if (user.value && user.value.user.role) {
+        return user.value.user.role.charAt(0).toUpperCase() + user.value.user.role.slice(1)
       }
       return ''
     })
-    const isDoctor = computed(() => store.getters['auth/isDoctor'])
+    // const isDoctor = computed(() => store.getters['auth/isDoctor'])
+     const isDoctor = user.value?.user.role === 'doctor'
     
     // Current year for footer
     const currentYear = new Date().getFullYear()
