@@ -154,16 +154,18 @@ export default {
     // Access store data
     const clients = computed(() => store.getters['clients/clients'])
     const programs = computed(() => store.getters['programs/programs'])
-    
+
+    console.log("programs.value", programs.value)
     // Filter only active programs
     const activePrograms = computed(() => {
+  
       return programs.value.filter(program => !program.status || program.status === 'Active')
     })
     
     // Verify user has doctor role
     const isDoctor = computed(() => store.getters['auth/isDoctor'])
     if (!isDoctor.value) {
-      router.push('/')
+      router.push('/');
     }
     
     // Load necessary data
@@ -190,6 +192,8 @@ export default {
       error.value = null
       success.value = false
       
+      console.log("form.value", form.value);
+     
       // Validate selected client and program
       if (!form.value.clientId) {
         error.value = 'Please select a client'
@@ -209,11 +213,7 @@ export default {
       
       try {
         // Convert ID strings to numbers if needed
-        const enrollmentData = {
-          ...form.value,
-          clientId: Number(form.value.clientId),
-          programId: Number(form.value.programId)
-        }
+        const enrollmentData = form.value;
         
         await store.dispatch('enrollments/enrollClient', enrollmentData)
         success.value = true
