@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create Axios instance with base config
 const api = axios.create({
-  baseURL: `${process.env.API_URL}/api`, // Replace with the third-party API's base URL
+  baseURL: `https://his-api.vercel.app/api`, // Replace with the third-party API's base URL
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
