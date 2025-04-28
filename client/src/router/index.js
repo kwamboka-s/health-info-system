@@ -90,15 +90,15 @@ const router = createRouter({
 
 // Navigation guard
 router.beforeEach((to, from, next) => {
-  const isLoggedIn = localStorage.getItem('user') !== null
+  const isLoggedIn = JSON.parse(localStorage.getItem('user')) !== null
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
   const isGuestRoute = to.matched.some(record => record.meta.guest)
-  const requiresDoctor = to.matched.some(record => record.meta.requiresDoctor)
+  const requiresDoctor = JSON.parse(localStorage.getItem('user'))?.user.role === 'doctor'
   
   // Check for doctor role if required
   if (requiresDoctor) {
     const user = JSON.parse(localStorage.getItem('user'))
-    if (!user || user.role !== 'doctor') {
+    if (!user || user.user.role !== 'doctor') {
       return next({ name: 'home' })
     }
   }
